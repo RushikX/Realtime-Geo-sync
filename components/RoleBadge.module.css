@@ -1,0 +1,44 @@
+.badge {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.tracker {
+  background: rgba(255, 107, 107, 0.2);
+  border: 1px solid var(--accent-tracker);
+  color: var(--accent-tracker);
+}
+
+.tracker .icon {
+  animation: pulse 1.5s infinite;
+}
+
+.tracked {
+  background: rgba(0, 212, 170, 0.2);
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.tracked .icon {
+  animation: pulse 2s infinite;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-family: 'Inter', sans-serif;
+}

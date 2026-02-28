@@ -1,0 +1,89 @@
+.hud {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: var(--overlay-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  min-width: 220px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.statusDot.connected {
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+
+.statusDot.connecting {
+  background: var(--warning);
+  animation: pulse 1s infinite;
+}
+
+.statusDot.disconnected {
+  background: var(--error);
+}
+
+.statusText {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.dataGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dataItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataLabel {
+  font-size: 10px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.dataValue {
+  font-size: 13px;
+  color: var(--accent-primary);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
