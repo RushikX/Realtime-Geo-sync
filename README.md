@@ -21,6 +21,7 @@ Real-time map synchronization between a Tracker (master) and Tracked (viewer) us
 ### 2. Configure Environment
 
 Create `.env.local`:
+
 ```
 NEXT_PUBLIC_PUSHER_KEY=your_key_here
 NEXT_PUBLIC_PUSHER_CLUSTER=your_cluster_here
@@ -51,14 +52,18 @@ Open http://localhost:3000
 ## Usage
 
 ### Creating a Session
+
 1. Click "Create New Session"
 2. Share the 6-character ID with the person you want to track
 3. You are the Tracker
 
 ### Joining a Session
+
 1. Enter the session ID
 2. Click "Join"
 3. You are the Tracked (following the map)
+
+> **Note:** to properly test joining, open the tracker and tracked views in different browsers or on different machines. Using two tabs in the same browser will reuse the same `localStorage` ID and won’t behave like separate users.
 
 ## Tech Stack
 
